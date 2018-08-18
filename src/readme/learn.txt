@@ -1,3 +1,5 @@
+单像素、reset兼容等解决方法：略。。。。
+
 安装轮播插件：
 npm install vue-awesome-swiper@2.6.7 --save
 
@@ -6,9 +8,9 @@ icon图标获取：
 
 设置文件目录别名
 webpack.base.conf.js文件下
-'styles':resolve('src/assets/styles')  ==》 
-import 'styles/iconfont.css'（main.js）  
-@import '~styles/varibles.styl'  header.vue引入文件 
+'styles':resolve('src/assets/styles')  ==》  'src/assets/styles'路径的别名设置为'style'
+import 'styles/iconfont.css'（main.js中引用）  
+@import '~styles/varibles.styl'  header.vue组件引入文件 
 
 varibles.styl文件
 $bgColor = #00bcd4（用变量代替硬编码，组件内样式可饮用该变量）
@@ -20,3 +22,11 @@ $bgColor = #00bcd4（用变量代替硬编码，组件内样式可饮用该变�
                 <img class="swiper-img" :src="item.imgUrl" />
             </swiper-slide>
 
+git使用（使用分支提交合并代码）
+    git pull 拉取代码
+    git add . 添加文件
+    git commit -m "miaoshu" 提交代码到当前分支
+    git push push代码到当前远程仓库
+    git checkout origin/master 切换到远程仓库的master分支
+    git merge origin/develop 想develop分支的代码合并到master分支
+    git push  push代码到当前分支（master）
