@@ -1,4 +1,7 @@
-单像素、reset兼容等解决方法：略。。。。
+reset兼容等解决方法：略。。。。
+
+
+一像素边框解决方案：未弄好，需要改
 
 安装轮播插件：
 npm install vue-awesome-swiper@2.6.7 --save
