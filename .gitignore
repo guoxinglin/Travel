@@ -10,6 +10,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+#自己加上的:git提交时可以忽略static/mock该路径
+# static/mock
+
 # Package Files #
 *.jar
 *.war

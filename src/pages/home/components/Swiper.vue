@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <swiper :options="swiperOption">
+        <swiper :options="swiperOption" v-if="showSwiper">
         <!-- slides -->
             <swiper-slide v-for="item of swiperList" :key="item.id">
                 <img class="swiper-img" :src="item.imgUrl" />
@@ -16,6 +16,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -24,14 +27,12 @@ export default {
         // some swiper options/callbacks
         // 所有的参数同 swiper 官方 api 参数
         // ...
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'https://source.qunarzz.com/site/images/wap/home/recommend/iphoneplus/dujia_shuqi_banner_20180710.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'https://source.qunarzz.com/site/images/wap/home/recommend/iphoneplus/20180716_wap_11043.jpg'
-      }]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.swiperList.length
     }
   }
 }
