@@ -1,7 +1,7 @@
 reset兼容等解决方法：略。。。。
 
-
-一像素边框解决方案：未弄好，需要改
+一像素边框解决方案：border.css  border-bottom样式
+移动端的点击300毫秒延迟问题：引入fastclick解决
 
 安装轮播插件：
 npm install vue-awesome-swiper@2.6.7 --save
@@ -33,3 +33,5 @@ git使用（使用分支提交合并代码）
     git checkout origin/master 切换到远程仓库的master分支
     git merge origin/develop 想develop分支的代码合并到master分支
     git push  push代码到当前分支（master）
+
+滚动：用插件实现(eg:city/list.vue)npm install better-scroll --save
