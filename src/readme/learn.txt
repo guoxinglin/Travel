@@ -34,4 +34,4 @@ git使用（使用分支提交合并代码）
     git merge origin/develop 想develop分支的代码合并到master分支
     git push  push代码到当前分支（master）
 
-滚动：用插件实现(eg:city/list.vue)npm install better-scroll --save
+滚动：用插件实现(eg:city/list.vue)npm install better-scroll --save        https://github.com/ustbhuangyi/better-scroll
