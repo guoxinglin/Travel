@@ -43,7 +43,6 @@ export default {
       $(el).siblings().css({color: ''})
     },
     handleLetterClick (e) {
-      debugger
       let tar = e.srcElement || e.target
       this.addClass(tar)
       this.$emit('change', e.target.innerText)

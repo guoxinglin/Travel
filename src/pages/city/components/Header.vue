@@ -7,8 +7,12 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'CityHeader'
+  name: 'CityHeader',
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
 <style lang="stylus"  scoped>

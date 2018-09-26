@@ -9,6 +9,7 @@
         class="search-item border-bottom"
         v-for="item of list"
         :key="item.id"
+        @click="handleCityClick(item.name)"
          >{{item.name}}</li>
          <li v-show="!list.length">无可匹配的数据</li>
       </ul>
@@ -16,6 +17,7 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import Bscroll from 'better-scroll'
 export default {
   name: 'CitySearch',
@@ -31,6 +33,14 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.searchcontent)
+  },
+  methods: {
+    handleCityClick (city) {
+      debugger
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+    ...mapActions(['changeCity'])
   },
   watch: {
     keyword () {
